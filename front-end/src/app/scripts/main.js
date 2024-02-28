@@ -4,6 +4,8 @@ import { WelcomeComponent } from "./welcome";
 import { ScoreComponent } from "./score";
 import { GameComponent } from "./game";
 
+import "../styles/style.css";
+
 // TODO #import-css: use ES side-effect imports to import styles/style.css
 
 const outlet = document.querySelector("#content-outlet");
