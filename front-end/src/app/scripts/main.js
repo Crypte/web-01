@@ -1,4 +1,5 @@
-// TODO #import-router: use ES named imports to import the router
+import { Router } from "./router";
+
 // TODO #import-components: use ES named imports to import WelcomeComponent, GameComponent a ScoreComponent
 // TODO #import-css: use ES side-effect imports to import styles/style.css
 
