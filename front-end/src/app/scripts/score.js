@@ -1,10 +1,9 @@
+import { parseUrl } from "./utils";
 // TODO #import-html: use ES default imports to import game.html as template
-// TODO #export-functions: remove the IIFE
-(function () {
-  // TODO #export-functions: export function ScoreComponent
+
   // TODO #class: use the ES6 class keyword
   /* class ScoreComponent constructor */
-  function ScoreComponent() {
+  export function ScoreComponent() {
     // TODO #extends: call super(template)
     var params = parseUrl();
     // TODO #import-html: assign template to this.template
@@ -13,10 +12,6 @@
     this.time = parseInt(params.time);
   }
 
-  // TODO #export-functions: remove this line
-  // put component in global scope, to be runnable right from the HTML.
-  window.ScoreComponent = ScoreComponent;
-
   // TODO #class: turn function into a method of ScoreComponent
   /* method ScoreComponent.init */
   ScoreComponent.prototype.init = function init() {
@@ -24,4 +19,3 @@
     document.getElementById("size").innerText = this.size;
     document.getElementById("time").innerText = this.time;
   };
-})();

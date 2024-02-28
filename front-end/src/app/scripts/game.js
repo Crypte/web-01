@@ -1,3 +1,5 @@
+import { parseUrl } from "./utils";
+
 // TODO #import-html: use ES default imports to import game.html as template
 
 var CARD_TEMPLATE = ""
@@ -8,19 +10,16 @@ var CARD_TEMPLATE = ""
   .concat("  </div>")
   .concat("</main>");
 
-// TODO #export-functions: remove the IIFE
-(function () {
   var environment = {
     api: {
       host: "http://localhost:8081",
     },
   };
 
-  // TODO #export-functions: export function GameComponent
   // TODO #class: use the ES6 class keyword
   // TODO #extends: extend Component
   /* class GameComponent constructor */
-  function GameComponent() {
+  export function GameComponent() {
     // TODO #extends: call super(template)
     // gather parameters from URL
     var params = parseUrl();
@@ -32,10 +31,6 @@ var CARD_TEMPLATE = ""
     this._flippedCard = null;
     this._matchedPairs = 0;
   }
-
-  // TODO #export-functions: remove this line
-  // put component in global scope, to be runnable right from the HTML.
-  window.GameComponent = GameComponent;
 
   // TODO #class: turn function into a method of GameComponent
   /* method GameComponent.init */
@@ -279,4 +274,3 @@ var CARD_TEMPLATE = ""
       },
     },
   });
-})();

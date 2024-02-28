@@ -1,6 +1,9 @@
 import { Router } from "./router";
 
-// TODO #import-components: use ES named imports to import WelcomeComponent, GameComponent a ScoreComponent
+import { WelcomeComponent } from "./welcome";
+import { ScoreComponent } from "./score";
+import { GameComponent } from "./game";
+
 // TODO #import-css: use ES side-effect imports to import styles/style.css
 
 const outlet = document.querySelector("#content-outlet");

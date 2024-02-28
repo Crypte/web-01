@@ -14,6 +14,7 @@
     "webpack-dev-server": "^5.0.2"
   },
   "scripts": {
+    "build": "webpack build --mode=production --no-devtool",
     "start": "webpack serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
