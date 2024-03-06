@@ -15,7 +15,7 @@ import card8 from "/src/assets/cards/card-8.png";
 import card9 from "/src/assets/cards/card-9.png";
 
 
-var CARD_TEMPLATE = ""
+let CARD_TEMPLATE = ""
   .concat('<main class="card-cmp">')
   .concat('  <div class="card-wrapper">')
   .concat('    <img class="card front-face" alt="card" />')
@@ -23,7 +23,7 @@ var CARD_TEMPLATE = ""
   .concat("  </div>")
   .concat("</main>");
 
-  var environment = {
+  let environment = {
     api: {
       host: "http://localhost:8081",
     },
@@ -37,7 +37,7 @@ var CARD_TEMPLATE = ""
   
     super(template)
     // gather parameters from URL
-    var params = parseUrl();
+    let params = parseUrl();
 
     this.template = template;
     // save player name & game ize
@@ -177,7 +177,7 @@ var CARD_TEMPLATE = ""
   
 
   // TODO #card-component: Change images location to /app/components/game/card/assets/***.png
-  var CARDS_IMAGE = [
+  let CARDS_IMAGE = [
     back,
     card0,
     card1,
